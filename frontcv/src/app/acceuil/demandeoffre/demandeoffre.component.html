@@ -1,0 +1,63 @@
+<app-nav></app-nav>
+<div class="container">
+  
+  <div align="center"> 
+      <font size="10" class="coloro">{{offre.nomentrepise}}</font>
+    
+<br><br><br>
+<div class="pad">
+    {{offre.titre}}
+</div>
+
+</div>
+<hr>
+<br><br><br>
+<div class="row">
+<h3>description :</h3>
+<br>
+<div class="pad">
+{{offre.description}}
+
+</div>
+    
+  </div>
+
+  <br><br><br>
+
+<div class="row">
+  <h3>technologie :</h3>
+      <div class="home-content ">
+          <div class="post-box"> 
+
+        <span class="label label-default capsul">
+             <a href="#">ddd</a>
+        </span>
+                        
+              
+                     
+            </div>
+      </div>
+
+          
+</div>
+
+<form (ngSubmit)="onSubmit()" #OffreForm="ngForm">
+
+    <div class="form-group">
+        <label for="sel1">choisir motre CV:</label>
+        <select class="form-control" id="power" [(ngModel)]="condidature.idcv" name="power"  #power="ngModel">
+          <option *ngFor="let item of cvs"  [ngValue]="item.id">{{item.nom}}</option>
+          
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="alterEgo"><font size="5">description</font></label>
+        <textarea class="form-control" [(ngModel)]="condidature.description"  name="description" cols="30" rows="10">
+
+        </textarea>
+        
+      </div>
+      <button type="submit" class="btn btn-success col-lg-12" >envoyer</button>
+  </form>
+
+</div>

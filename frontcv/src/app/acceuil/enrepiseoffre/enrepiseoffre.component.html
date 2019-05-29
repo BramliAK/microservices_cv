@@ -1,0 +1,41 @@
+
+<table class="table table-striped">
+  <thead>
+  <tr >
+  
+  <th >titre   </th>
+  <th >description   </th>
+  <th >type   </th>
+  <th >nomentrepise   </th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor=" let item of offres">
+      <td><a routerLink="/condidature/{{item.idemploit}}">{{item.titre}} </a> <span class="badge badge-danger">{{item.nbrcondidature}}</span></td>
+      <td>{{item.description}}</td>
+      <td >{{item.type}}</td>
+      <td>{{item.nomentrepise}}</td>
+
+      <td class="text-right">
+          <div class="btn-group flex-btn-group-container">
+              <button type="submit"
+              routerLink="/Home/{{item.idemploit}}"
+                      class="btn btn-primary btn-sm">
+                  
+                  <span class="d-none d-md-inline" >Edit</span>
+              </button>
+              <button type="submit"
+                      (click)="delete(item.idemploit)"
+                      replaceUrl="true"
+                      queryParamsHandling="merge"
+                      class="btn btn-danger btn-sm">
+                  
+                  <span class="d-none d-md-inline" >Delete</span>
+              </button>
+          </div>
+      </td>
+  </tr>
+</tbody>
+</table>
+

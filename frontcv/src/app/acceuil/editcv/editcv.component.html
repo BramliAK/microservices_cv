@@ -1,0 +1,41 @@
+<app-nav></app-nav>
+<div class="container">
+  
+    <h1>Edit CV</h1>
+    <form (ngSubmit)="onSubmit()" #OffreForm="ngForm">
+      <div class="form-group">
+        <label for="name">nom</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="cv.nom" name="name"
+               #name="ngModel">
+
+        </div>
+ 
+      <div class="form-group">
+        <label for="alterEgo">description</label>
+        <textarea class="form-control" [(ngModel)]="cv.description" name="description" cols="30" rows="10">
+
+        </textarea>
+        
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">CV</label>
+        <input multiple (change)="getFiles($event)" type="file" class="form-control" [(ngModel)]="cv.cvpdf" name="pdf">
+      </div>
+      
+      
+      <div  *ngIf="count" class="alert alert-success">
+            {{message}}
+     </div>
+     <div *ngIf="!count" class="alert alert-success">
+      {{message}}
+</div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!OffreForm.form.valid">Submit</button>
+      
+    </form>
+  
+ 
+ 
+</div>

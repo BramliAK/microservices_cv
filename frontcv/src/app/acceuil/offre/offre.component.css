@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body{font-family: 'Lato', sans-serif;}
+/* Global Style */
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Zilla Slab', serif;
+}
+a{
+	color: #333
+}
+.btn-orange-transparent{
+	border:1px solid #F18D1D;
+	color: #F18D1D;
+	background: none;
+}
+.btn-orange-transparent:hover, .btn-orange-transparent:focus{
+	background:#F18D1D;;
+	color: #fff;
+}
+.btn i{padding-right: 10px;}
+.btn-default{
+  background:#F18D1D;
+  color: #fff;
+  border:none;
+}
+.capsul{
+	border-radius:50px;
+}
+
+
+/*--- Home Content ---*/
+
+
+
+.home-content-sec .menu-btn{
+	position: fixed;
+	right:15px;
+	top:15px;
+	color: #232323;
+	font-size: 30px;
+}
+.home-content{
+	float: left;
+	width:100%;
+	margin-top:0px;
+}
+.home-content .post-listing{
+	float: left;
+	width:100%;
+	margin-top:0px;
+	height: 85vh;
+	padding: 0;
+	overflow-y:hidden;
+	position: relative;
+}
+.home-content .tab-content .post-listing {
+    height: 80vh;
+}
+.home-content .post-listing .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #F18D1D;
+}
+.home-content .post-listing .mCSB_scrollTools {
+    height: 300px;
+    top: 25%;
+    width: 20px;
+}
+.home-content .post-listing .mCSB_scrollTools .mCSB_draggerRail {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.home-content .meta-info{
+	float: left;
+	width:100%;
+}
+.home-content .category-meta {
+    float: left;
+    margin: 0 0 9px;
+    width: 100%;
+}
+.home-content .date-meta{
+	color: #b4b4b4;
+    float: left;
+    margin: 7px 0 0;
+    width: 100%;
+}
+.home-content .post-box {
+    float: left;
+    margin-bottom: 15px;
+    padding: 20px 0 20px 20px;
+    width: 100%;
+    position: relative;
+}
+.home-content .post-box:before{
+	background: #F18D1D;
+	border-radius: 50px;
+    bottom: 0;
+    content: "";
+    height: 5px;
+    left: 22px;
+    position: absolute;
+    width: 98px;
+}
+.home-content .post-box h2 {
+	font-size: 29px;
+	margin: 0 0 9px;
+}
+.home-content .post-box h2 a{
+	color: #333;
+	text-decoration: none
+}
+.home-content .post-box h2 a:hover{
+	color: #F18D1D;
+}
+.home-content .post-box p{
+	margin: 0;
+	float: left;
+	width: 100%;
+	padding-left: 4px;
+}
+.home-content .post-box .label-default{
+	border: 1px solid #f18d1d;
+    color: #f18d1d;
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 5px;
+    padding: 3px 10px;
+    background:#fff;
+}
+

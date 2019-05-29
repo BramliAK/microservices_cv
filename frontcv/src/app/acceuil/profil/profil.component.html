@@ -1,0 +1,46 @@
+<app-nav></app-nav>
+
+<label ></label>
+<table class="table table-striped">
+  <thead>
+    <tr>
+        
+            <a href="addprofil" class="btn btn-primary">add cv</a>
+          
+    </tr>
+  <tr >
+  
+  <th >nom   </th>
+  <th >description   </th>
+  <th >cvpdf   </th>
+<th></th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor='let item of cvs' >
+     <td>{{item.nom}}</td>
+     <td>{{item.description}}</td>
+     <td>{{item.cvpdf}}</td>
+     <td class="text-right">
+      <div class="btn-group flex-btn-group-container">
+          <button type="submit"
+          routerLink="/profil/{{item.id}}"
+                  class="btn btn-primary btn-sm">
+              
+              <span class="d-none d-md-inline" >Edit</span>
+          </button>
+          <button type="submit"
+                  (click)="delete(item.id)"
+                  replaceUrl="true"
+                  queryParamsHandling="merge"
+                  class="btn btn-danger btn-sm">
+              
+              <span class="d-none d-md-inline" >Delete</span>
+          </button>
+      </div>
+  </td>
+  </tr>
+</tbody>
+</table>
+

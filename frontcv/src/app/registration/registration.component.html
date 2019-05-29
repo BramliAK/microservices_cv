@@ -1,0 +1,65 @@
+
+<section class="login-block">
+<div class="container">
+
+    <div class="row">
+        <div  class="col-md-8 login-sec">
+            
+        <div class="col-xs-12 col-sm-8 col-md-12 col-sm-offset-2 col-md-offset-3">
+            <h2 class="text-center">Regiter Now</h2>
+        <form role="form" (ngSubmit)="onSubmit()" #OffreForm="ngForm">
+
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                            <input type="text" name="first_name" [(ngModel)]="user.nom" id="first_name" class="form-control input-lg col-md-12" placeholder="First Name" tabindex="1">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="last_name" id="last_name" [(ngModel)]="user.prenom" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" name="email" id="email" [(ngModel)]="user.email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+          </div>
+          <div class="form-group ">
+                <select name="type" [(ngModel)]="user.role" class="form-control input-lg">
+                  <option value="ROLE_USER">Client</option>
+                  <option value="ROLE_ENR">entrepise</option>
+                  
+                </select>
+            </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" name="password_confirmation" [(ngModel)]="pwd" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+              </div>
+            </div>
+          </div>
+          
+          <div  *ngIf="count" class="alert alert-success">
+            {{message}}
+     </div>
+     <div *ngIf="!count" class="alert alert-danger">
+      {{message}}
+</div>
+          <hr class="colorgraph">
+          <div class="row">
+            <div class="col-xs-12 col-md-6"><input type="submit" value="Register" [disabled]="!OffreForm.form.valid"  class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+            <div class="col-xs-12 col-md-6"><a routerLink="/login" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+    </section>

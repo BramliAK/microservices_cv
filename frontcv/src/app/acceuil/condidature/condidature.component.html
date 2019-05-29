@@ -1,0 +1,67 @@
+<app-nav></app-nav>
+<table class="table table-striped">
+    <thead>
+    <tr >
+    
+    <th >id   </th>
+    <th >description   </th>
+    <th >idcv   </th>
+    <th >idemp   </th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor=" let item of listc">
+        <td>{{item.id}}</td>
+        <td>{{item.description}}</td>
+        <td >{{item.idcv}}</td>
+        <td>{{item.idemploit}}</td>
+  
+        <td class="text-right">
+            <div class="btn-group flex-btn-group-container">
+                <button type="submit"
+                (click)="openModal(template1,item.idcv)"          
+                class="btn btn-primary btn-sm">
+                    
+                    <span class="d-none d-md-inline" >voire detait</span>
+                </button>
+                <button type="submit"
+                        (click)="delete(item.idclient,item.id)"
+                        replaceUrl="true"
+                        queryParamsHandling="merge"
+                        class="btn btn-danger btn-sm">
+                    
+                    <span class="d-none d-md-inline" >Delete</span>
+                </button>
+            </div>
+        </td>
+    </tr>
+  </tbody>
+  </table>
+  
+ <div >
+
+</div>
+<div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <pdf-viewer [src]="pdfSrc1"></pdf-viewer>
+      </div>
+<ng-template #template1>
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Modal</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+              <pdf-viewer [src]="pdfSrc1"></pdf-viewer>
+        </div>
+      </ng-template>
+  
+  
+  

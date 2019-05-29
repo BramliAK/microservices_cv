@@ -1,0 +1,26 @@
+
+ <div class="home-content-sec">
+ 
+    <section class="home-content ">
+      <div *ngFor="let item of offre">
+        <div class="post-box">
+            <h1>{{item.nomentrepise}}</h1>
+            <h2><a routerLink="/offre/{{item.idemploit}}">{{item.titre}}</a></h2>
+            <div class="category-meta">
+                      <span class="label label-default capsul">
+                        <a href="#">{{item.type }}</a>
+                      </span>
+                      
+            </div>
+                    <p>{{item.description}}</p>
+          </div>
+        </div>
+
+      <div class="container-fluid">
+        <div class="post-listing custom-scroll">
+         
+        </div>
+      </div>
+    
+    </section>
+  </div>
